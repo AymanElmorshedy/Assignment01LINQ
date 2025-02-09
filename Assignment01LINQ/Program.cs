@@ -118,11 +118,18 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q04
-            string[] Arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-            var result = Arr.OrderBy(n=>n.Length).ThenBy(n=>n);
-            foreach (var item in result)
-                Console.WriteLine(item);
+            //string[] Arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+            //var result = Arr.OrderBy(n=>n.Length).ThenBy(n=>n);
+            //foreach (var item in result)
+            //    Console.WriteLine(item);
 
+            #endregion
+
+            #region Q05
+            string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            var result = Arr.OrderBy(word=>word.Length).ThenBy(word=>word,StringComparer.OrdinalIgnoreCase);
+            foreach(var item in result)
+                Console.WriteLine(item);
             #endregion
 
             #endregion
