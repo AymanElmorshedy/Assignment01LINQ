@@ -74,7 +74,7 @@ namespace Assignment01LINQ
             //var resuly= Arr.Count();
             //Console.WriteLine(resuly);
             #endregion
-            string[] dictionaryWords = File.ReadAllLines("dictionary_english.txt");
+            //string[] dictionaryWords = File.ReadAllLines("dictionary_english.txt");
             #region Q05
 
             //var result = dictionaryWords.Count();
@@ -126,10 +126,24 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q05
-            string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
-            var result = Arr.OrderBy(word=>word.Length).ThenBy(word=>word,StringComparer.OrdinalIgnoreCase);
+            //string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var result = Arr.OrderBy(word=>word.Length).ThenBy(word=>word,StringComparer.OrdinalIgnoreCase);
+            //foreach(var item in result)
+            //    Console.WriteLine(item);
+            #endregion
+
+            #region Q06
+
+            #endregion
+
+            #endregion
+
+            #region LINQ – Transformation Operators
+            #region Q01
+            var result = ProductsList.Select(p => p.ProductName);
             foreach(var item in result)
                 Console.WriteLine(item);
+
             #endregion
 
             #endregion
