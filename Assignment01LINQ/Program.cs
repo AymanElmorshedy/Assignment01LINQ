@@ -69,9 +69,15 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q04
-            int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
-            var resuly= Arr.Count();
-            Console.WriteLine(resuly);
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var resuly= Arr.Count();
+            //Console.WriteLine(resuly);
+            #endregion
+
+            #region Q05
+            string[] dictionaryWords = File.ReadAllLines("dictionary_english.txt");
+            var result = dictionaryWords.Count();
+            Console.WriteLine(result);
             #endregion
             #endregion
         }
