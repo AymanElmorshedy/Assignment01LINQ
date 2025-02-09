@@ -81,7 +81,12 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q06
-            var result = dictionaryWords.Min(x => x.Length);
+            //var result = dictionaryWords.Min(x => x.Length);
+            //Console.WriteLine(result);
+            #endregion
+
+            #region Q07
+            var result = dictionaryWords.Max(x => x.Length);
             Console.WriteLine(result);
             #endregion
             #endregion
