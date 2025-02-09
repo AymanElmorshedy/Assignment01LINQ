@@ -97,9 +97,18 @@ namespace Assignment01LINQ
             #endregion
 
             #region LINQ - Ordering Operators
+            #region Q01
             //var result = ProductsList.OrderBy(p => p.ProductName);
             //foreach(var item in result)
-            //    Console.WriteLine(item);
+            //    Console.WriteLine(item); 
+            #endregion
+
+            #region Q02
+            string[] arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            var result = arr.OrderBy(word=>word, StringComparer.OrdinalIgnoreCase);
+            foreach(var item in result)
+                Console.WriteLine(item);
+            #endregion
 
             #endregion
         }
