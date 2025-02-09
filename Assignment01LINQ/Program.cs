@@ -1,4 +1,5 @@
-﻿using static Assignment01LINQ.ListGenerator;
+﻿using System.Threading;
+using static Assignment01LINQ.ListGenerator;
 namespace Assignment01LINQ
 {
     internal class Program
@@ -111,9 +112,17 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q03
-            var result = ProductsList.OrderBy(p => p.UnitsInStock);
-            foreach ( var item in result )
+            //var result = ProductsList.OrderBy(p => p.UnitsInStock);
+            //foreach ( var item in result )
+            //    Console.WriteLine(item);
+            #endregion
+
+            #region Q04
+            string[] Arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+            var result = Arr.OrderBy(n=>n.Length).ThenBy(n=>n);
+            foreach (var item in result)
                 Console.WriteLine(item);
+
             #endregion
 
             #endregion
