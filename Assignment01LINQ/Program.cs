@@ -51,9 +51,15 @@ namespace Assignment01LINQ
 
             #region Aggregate Operators
             #region Q01
-            int[] Numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
-            var result = Numbers.Count(n=>n%2==1);
-            Console.WriteLine(result);
+            //int[] Numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var result = Numbers.Count(n=>n%2==1);
+            //Console.WriteLine(result);
+            #endregion
+
+            #region Q02
+            var Result = CustomersList.Select(c => new { customerId = c.CustomerID, customerName = c.CustomerName, OrderCount = c.Orders.Count() });
+            foreach (var item in Result) 
+                Console.WriteLine(item);
             #endregion
             #endregion
         }
