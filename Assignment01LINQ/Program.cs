@@ -19,14 +19,21 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q03
-            string[] arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //string[] arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
-            var result = arr
-                .Select((word, index) => new { word, index })
-                .Where(x => x.word.Length < x.index)
-                .Select(x => x.index);
+            //var result = arr
+            //    .Select((word, index) => new { word, index })
+            //    .Where(x => x.word.Length < x.index)
+            //    .Select(x => x.index);
 
-            Console.WriteLine("Digits whose name is shorter than their value: " + string.Join(", ", result));
+            //Console.WriteLine("Digits whose name is shorter than their value: " + string.Join(", ", result));
+            #endregion
+            #endregion
+
+            #region LINQ Element Operator
+            #region Q01
+            var result = ProductsList.First(p=>p.UnitsInStock==0);
+            Console.WriteLine(result);
             #endregion
             #endregion
         }
