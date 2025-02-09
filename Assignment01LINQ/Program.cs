@@ -73,10 +73,15 @@ namespace Assignment01LINQ
             //var resuly= Arr.Count();
             //Console.WriteLine(resuly);
             #endregion
-
-            #region Q05
             string[] dictionaryWords = File.ReadAllLines("dictionary_english.txt");
-            var result = dictionaryWords.Count();
+            #region Q05
+
+            //var result = dictionaryWords.Count();
+            //Console.WriteLine(result);
+            #endregion
+
+            #region Q06
+            var result = dictionaryWords.Min(x => x.Length);
             Console.WriteLine(result);
             #endregion
             #endregion
