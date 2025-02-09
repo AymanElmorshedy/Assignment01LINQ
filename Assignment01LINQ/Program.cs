@@ -157,17 +157,31 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q03
-            var result = ProductsList
-            .Select(p => new
+            //var result = ProductsList
+            //.Select(p => new
+            //{
+            //    p.ProductID,
+            //    p.ProductName,
+            //    p.Category,
+            //    Price = p.UnitPrice,  
+            //    p.UnitsInStock
+            //});
+            //foreach(var item in result )
+            //    Console.WriteLine(item);
+            #endregion
+
+            #region Q04
+            int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            var matches = Arr.Select((value, index) => new { Value = value, Index = index, Matches = value == index });
+                        
+
+            // Display the results
+            foreach (var match in matches)
             {
-                p.ProductID,
-                p.ProductName,
-                p.Category,
-                Price = p.UnitPrice,  
-                p.UnitsInStock
-            });
-            foreach(var item in result )
-                Console.WriteLine(item);
+                Console.WriteLine($"Value {match.Value} at index {match.Index} matches.");
+            }
+
             #endregion
 
             #endregion
