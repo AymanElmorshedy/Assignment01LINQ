@@ -91,9 +91,16 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q08
-            var result = dictionaryWords.Average(d=>d.Length);
-            Console.WriteLine(result);
+            //var result = dictionaryWords.Average(d=>d.Length);
+            //Console.WriteLine(result);
             #endregion
+            #endregion
+
+            #region LINQ - Ordering Operators
+            //var result = ProductsList.OrderBy(p => p.ProductName);
+            //foreach(var item in result)
+            //    Console.WriteLine(item);
+
             #endregion
         }
     }
