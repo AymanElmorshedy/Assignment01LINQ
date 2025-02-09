@@ -67,6 +67,12 @@ namespace Assignment01LINQ
             //foreach(var item in result)
             //    Console.WriteLine(item);
             #endregion
+
+            #region Q04
+            int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            var resuly= Arr.Count();
+            Console.WriteLine(resuly);
+            #endregion
             #endregion
         }
     }
