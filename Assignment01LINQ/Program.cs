@@ -147,13 +147,27 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q02
-            string[] words = { "aPPLE", "BlUeBeRrY", "cHeRry" };
-            var result = words.Select(w => new { Original = w, Uppercase = w.ToUpper(), Lowercase = w.ToLower()});
+            //string[] words = { "aPPLE", "BlUeBeRrY", "cHeRry" };
+            //var result = words.Select(w => new { Original = w, Uppercase = w.ToUpper(), Lowercase = w.ToLower()});
 
-            foreach (var item in result)
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Original: {item.Original}, Uppercase: {item.Uppercase}, Lowercase: {item.Lowercase}");
+            //}
+            #endregion
+
+            #region Q03
+            var result = ProductsList
+            .Select(p => new
             {
-                Console.WriteLine($"Original: {item.Original}, Uppercase: {item.Uppercase}, Lowercase: {item.Lowercase}");
-            }
+                p.ProductID,
+                p.ProductName,
+                p.Category,
+                Price = p.UnitPrice,  
+                p.UnitsInStock
+            });
+            foreach(var item in result )
+                Console.WriteLine(item);
             #endregion
 
             #endregion
