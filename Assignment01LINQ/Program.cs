@@ -37,8 +37,15 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q02
-            var result = ProductsList.FirstOrDefault(p => p.UnitPrice > 1000);
+            //var result = ProductsList.FirstOrDefault(p => p.UnitPrice > 1000);
+            //Console.WriteLine(result);
+            #endregion
+
+            #region Q03
+            int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            var result = Arr.Where(a=>a>5).Skip(1).FirstOrDefault();
             Console.WriteLine(result);
+
             #endregion
             #endregion
         }
