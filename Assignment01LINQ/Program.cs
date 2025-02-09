@@ -32,7 +32,12 @@ namespace Assignment01LINQ
 
             #region LINQ Element Operator
             #region Q01
-            var result = ProductsList.First(p=>p.UnitsInStock==0);
+            //var result = ProductsList.First(p=>p.UnitsInStock==0);
+            //Console.WriteLine(result);
+            #endregion
+
+            #region Q02
+            var result = ProductsList.FirstOrDefault(p => p.UnitPrice > 1000);
             Console.WriteLine(result);
             #endregion
             #endregion
