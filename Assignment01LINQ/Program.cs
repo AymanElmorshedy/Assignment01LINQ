@@ -104,9 +104,15 @@ namespace Assignment01LINQ
             #endregion
 
             #region Q02
-            string[] arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
-            var result = arr.OrderBy(word=>word, StringComparer.OrdinalIgnoreCase);
-            foreach(var item in result)
+            //string[] arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var result = arr.OrderBy(word=>word, StringComparer.OrdinalIgnoreCase);
+            //foreach(var item in result)
+            //    Console.WriteLine(item);
+            #endregion
+
+            #region Q03
+            var result = ProductsList.OrderBy(p => p.UnitsInStock);
+            foreach ( var item in result )
                 Console.WriteLine(item);
             #endregion
 
